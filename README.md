@@ -46,7 +46,7 @@ double Ki = 0.0001;  // integral coefficient
 double Kd = 4.0;  // differential coefficient
 ~~~~~
 
-These hyper parameters brought the good result. The result is below.
+These hyper parameters brought the good result. The result is below.  
 Please click on the images if you want to see the video:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=yCJ-cya4jbI" target="_blank">
