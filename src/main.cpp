@@ -61,10 +61,10 @@ int main()
           pid.UpdateError(cte);
           steer_value = pid.TotalError();
           if (steer_value > 10.0) {
-				steer_value = 10.0;
+            steer_value = 10.0;
           }
           else if ( steer_value < -10.0) {
-                steer_value = -10.0;
+            steer_value = -10.0;
           }
           // DEBUG
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
