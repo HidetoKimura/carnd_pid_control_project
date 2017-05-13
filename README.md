@@ -38,7 +38,7 @@ double Kd = 4.0;  // differential coefficient
 ~~~~~
 
 As the integrate value of cte increased, the car turned around the same spot.  
-I tried Kd value from 0.1 to 0.001 and finally I set Kd value at 0.001.
+I tried Kd value from 0.1 to 0.0001 and finally I set Kd value at 0.0001.
 
 ~~~~~
 double Kp = 0.2;  // proportional coefficient
