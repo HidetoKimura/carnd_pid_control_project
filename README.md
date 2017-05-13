@@ -9,7 +9,7 @@ In order to avoid build failure, I changed "main.cpp".
 /Users/hideto.kimura/carnd/carnd_term2/carnd_pid_control_project/src/main.cpp:39:5: error: 
       no matching member function for call to 'onMessage'
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t ...
-  ~~^~~~~~~~~
+                                                 ^
 /usr/local/include/uWS/Group.h:69:10: note: candidate function not viable: no
       known conversion from '(lambda at
       /Users/hideto.kimura/carnd/carnd_term2/carnd_pid_control_project/src/main.cpp:39:15)'
@@ -17,7 +17,7 @@ In order to avoid build failure, I changed "main.cpp".
       'function<void (WebSocket<true> *, char *, unsigned long, uWS::OpCode)>')
       for 1st argument
     void onMessage(std::function<void(WebSocket<isServer> *, char *, siz...
-         ^
+                                                          ^
 /usr/local/include/uWS/Group.h:69:10: note: candidate function not viable: no
       known conversion from '(lambda at
       /Users/hideto.kimura/carnd/carnd_term2/carnd_pid_control_project/src/main.cpp:39:15)'
