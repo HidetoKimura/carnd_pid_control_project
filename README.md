@@ -4,9 +4,11 @@ Self-Driving Car Engineer Nanodegree Program
 ---
 ## Approach
 
-Based on the value when operating the simulator with the game pad, I decided the upper and lower limits of the steering from -10.0 to 10.0. And like "behavior cloning project", I fixed throttle value at 0.3.
+Based on the value when operating the simulator with the game pad,   
+I decided the upper and lower limits of the steering from -10.0 to 10.0.  
+And like "behavior cloning project", I fixed throttle value at 0.3.  
 
-I tuned Kp, Ki and Kd one by one, manually.
+I tuned Kp, Ki and Kd one by one, manually.  
 Initial parameter is below.
 
 ~~~~~
@@ -15,8 +17,8 @@ double Ki = 0.0;  // integral coefficient
 double Kd = 0.0;  // differential coefficient
 ~~~~~
 
-If Kp > 1.0, then the car overshoots greatly, and if Kp < 0.1, then it could not turn around the curve.
-I set Kp value at 0.2.
+If Kp > 1.0, then the car overshoots greatly, and if Kp < 0.1, then it could not turn around the curve.  
+Finally I set Kp value at 0.2.
 
 ~~~~~
 double Kp = 0.2;  // proportional coefficient
@@ -24,10 +26,10 @@ double Ki = 0.0;  // integral coefficient
 double Kd = 0.0;  // differential coefficient
 ~~~~~
 
-Next, Since Kd is a coefficient for the difference from the previous cte, 
-I'd like to increase the steering value as the defference increases.
-So Kd must be greater than 1.0. Kd is bigger, the car can turn even if it is a tight curve.
-I set Kd value at 4.0.
+Next, Since Kd is a coefficient for the difference from the previous cte,  
+I'd like to increase the steering value as the defference increases.  
+So Kd must be greater than 1.0. Kd is bigger, the car can turn even if it is a tight curve.  
+Finally I set Kd value at 4.0.
 
 ~~~~~
 double Kp = 0.2;  // proportional coefficient
@@ -35,7 +37,7 @@ double Ki = 0.0;  // integral coefficient
 double Kd = 4.0;  // differential coefficient
 ~~~~~
 
-As the integrate value of cte increased, the car turned around the same spot.
+As the integrate value of cte increased, the car turned around the same spot.  
 I tried Kd value from 0.1 to 0.001 and finally I set Kd value at 0.001.
 
 ~~~~~
